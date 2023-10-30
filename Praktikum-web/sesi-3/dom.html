@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Belajar DOM</title>
+</head>
+
+<body>
+    <h1 id="uji_heading" onmouseover="sorot(this)" onmouseout="keluarSorot(this)"></h1>
+    Sorot dong!
+    <h2 id="uji_klik" onmousedown="tahan(this)" onmouseup="lepas(this)"></h2>
+    Klik dong!
+    <label for="uji_input">Uji Coba Input</label><br>
+    <input type="text" id="uji_input" onkeyup="tiru()"><br>
+    <span id="uji_span"></span><br>
+    <button onclick="klik()">Klik</button>
+    <button onclick="ulangi()">Ulangi</button>
+    <script>
+        function sorot(obj) {
+            obj.innerHTML = "Sudah disorot";
+        }
+
+        function keluarSorot(obj) {
+            obj.innerHTML = "Sorot lagi dong!";
+        }
+
+        function tahan(obj) {
+            obj.innerHTML = "Lepasin...";
+        }
+
+        function lepas(obj) {
+            obj.innerHTML = "Klik lagi dong!";
+        }
+
+        function klik() {
+            //var valueInput = document.getElementById('uji_input').value;
+            //var ujiSpan = document.getElementById('uji_span');
+
+            if (valueInput === "") {
+                ujiSpan.innerHTML = "inputan kosong";
+                ujiSpan.style.color = "red";
+            } else {
+                ujiSpan.innerHTML = "input: '" + valueInput + "'";
+                ujiSpan.style.color = "brown";
+            }
+        }
+
+        function ulangi() {
+            document.getElementById('uji_input').value = "";
+            document.getElementById('uji_span').innerHTML = "";
+            document.getElementById('uji_heading').innerHTML = "Sorot dong!";
+            document.getElementById('uji_klik').innerHTML = "Klik dong!";
+        }
+
+        function tiru() {
+            var valueInput = document.getElementById('uji_input').value;
+            document.getElementById('uji_span').innerHTML = valueInput;
+        }
+    </script>
+</body>
+
+</html>

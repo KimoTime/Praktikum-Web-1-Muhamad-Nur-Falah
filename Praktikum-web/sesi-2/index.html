@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            color: aqua;
+            border: 2px solid black;
+        }
+
+        h1 {
+            color: green;
+            background-color: black;
+        }
+
+        .teks-merah,
+        #teks-kuning {
+            font-size: 20px;
+            text-align: center;
+            background-color: black;
+        }
+
+        .teks-merah {
+            color: red;
+        }
+
+        #teks-kuning {
+            color: yellow;
+        }
+
+        div p {
+            color: rgb(64, 255, 0);
+        }
+
+        div>div>p {
+            font-weight: bold;
+        }
+
+        .subbagian {
+            font-size: 30px;
+        }
+
+        .subbagian.header {
+            color: blueviolet;
+        }
+
+        .subbagian#teks {
+            color: brown;
+        }
+
+        .kotak-satu {
+            padding: 20px;
+            margin: 10px;
+            border: 2px solid;
+            background-color: lightblue;
+        }
+
+        .kotak-dua {
+            padding: 20px;
+            margin: 10px;
+            border: 2px double black;
+            background-color: palegreen;
+            max-width: 50px;
+        }
+
+        .kotak-tiga {
+            padding-left: 150px;
+            margin-top: 50px;
+            margin-left: 50px;
+            border-left: 2px dotted rgb(0, 0, 0);
+            background-color: burlywood;
+            width: 300px;
+            height: 200px;
+        }
+
+        p:hover {
+            background-color: aqua;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Pemogragram Web 1</h1>
+    <p class="teks-merah">praktik Pemogragram web 1 sesi 2 akan membahas tentang menggunakan CSS. </p>
+    <p id="teks-kuning">CSS atau cascanding style sheets adalah sebuah bahasa yang di gunakan untuk
+        mengatur tampilan suatu halaman web</p>
+
+    <div>
+        <p>Ini Adalah Paragraf Pertama</p>
+        <div>
+            <P>Ini Adalah Paragaf Kedua</P>
+        </div>
+    </div>
+    <div>
+        <div class="subbagian header">Bagian Header</div>
+        <p class="subbagian" id="teks">ini adalah Paragraf</p>
+    </div>
+
+    <div class="kotak-satu">kotak satu</div>
+    <div class="kotak-dua">kotak dua</div>
+    <div class="kotak-tiga">kotak-tiga</div>
+</body>
+
+
+</html>
